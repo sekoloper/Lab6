@@ -41,7 +41,7 @@ namespace Lab6
             _cash = (float)_numerator / _denominator;
         }
 
-        public float? GetCash()
+        public float? GetValue()
         {
             return _cash; 
         }
