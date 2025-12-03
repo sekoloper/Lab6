@@ -62,9 +62,9 @@ namespace Lab6
                 Fraction f7 = (Fraction)f6.Clone();
                 Console.WriteLine($"Дробь f7({f7}) это клон дроби f6({f6})");
 
-                Console.WriteLine($"Вещественное значение дроби f7({f7}) до вычисления кэша: {f7.GetValue()}");
+                Console.WriteLine($"Вещественное значение дроби f7({f7}) до вычисления кэша: {f7.GetRealValue()}");
                 f7.Cash();
-                Console.WriteLine($"Вещественное значение f7({f7}) после вычисления кэша: {f7.GetValue()}");
+                Console.WriteLine($"Вещественное значение f7({f7}) после вычисления кэша: {f7.GetRealValue()}");
             }
             catch(Exception e)
             {
