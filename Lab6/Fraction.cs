@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab6
 {
-    internal class Fraction : ICloneable
+    internal class Fraction : ICloneable, IRealValue, INumeratorDenominator
     {
         private int _numerator;
         private int _denominator;
@@ -15,7 +15,7 @@ namespace Lab6
             get { return _numerator; } 
         }
 
-        public int Denomerator
+        public int Denominator
         {
             get { return _denominator; }
         }
@@ -26,7 +26,7 @@ namespace Lab6
             _cash = null;
         }
 
-        public void SetDenomerator(int denominator)
+        public void SetDenominator(int denominator)
         {
             if (denominator != 0)
             {
@@ -41,7 +41,7 @@ namespace Lab6
             _cash = (float)_numerator / _denominator;
         }
 
-        public float? GetValue()
+        public float? GetRealValue()
         {
             return _cash; 
         }
@@ -102,7 +102,7 @@ namespace Lab6
         public static Fraction operator /(Fraction a, Fraction b)
         {
             Fraction f = Reduce(new Fraction(a._numerator * b._denominator, a._denominator * b._numerator));
-            Console.WriteLine($"{a._numerator}/{a._denominator} * {b._numerator}/{b._denominator} = {f._numerator}/{f._denominator}");
+            Console.WriteLine($"{a._numerator}/{a._denominator} / {b._numerator}/{b._denominator} = {f._numerator}/{f._denominator}");
             return f;
         }
 
